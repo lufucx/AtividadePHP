@@ -50,7 +50,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?php echo htmlspecialchars($produto['id']); ?></td>
                 <td><?php echo htmlspecialchars($produto['descricao']); ?></td>
                 <td><?php echo htmlspecialchars($produto['fabricante']); ?></td>
-                <td><?php echo htmlspecialchars($produto['qtd_inteiro']); ?></td>
+                <td><?php echo htmlspecialchars($produto['quantidade']); ?></td>
                 <td><?php echo htmlspecialchars($produto['preco_custo']); ?></td>
                 <td><?php echo htmlspecialchars($produto['preco_venda']); ?></td>
                 <td><img src="<?php echo htmlspecialchars($produto['imagem']); ?>" alt="<?php echo htmlspecialchars($produto['descricao']); ?>" width="100"></td>
