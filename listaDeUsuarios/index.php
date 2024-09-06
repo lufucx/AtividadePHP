@@ -11,9 +11,9 @@
         <nav>
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="">Contatos</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="login.php">Login</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href="cadastro.php">Cadastrar-se</a></li>
 
             </ul>
         </nav>

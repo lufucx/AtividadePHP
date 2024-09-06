@@ -11,6 +11,8 @@
 
     if ($resultado > 0) {
         echo ("Cadastrado com sucesso");
+
+        header("location: index.php");
     }
 
 
