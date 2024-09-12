@@ -4,12 +4,12 @@ include 'db.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $descricao = htmlspecialchars($_POST['descricao']);
     $fabricante = htmlspecialchars($_POST['fabricante']);
-    $qtd_inteiro = (int)$_POST['quantidade'];
+    $qtd_inteiro = (int)$_POST['qtd_inteiro'];
     $preco_custo = (float)$_POST['preco_custo'];
     $preco_venda = (float)$_POST['preco_venda'];
     $imagem = htmlspecialchars($_POST['imagem']);
 
-    $stmt = $pdo->prepare("INSERT INTO produtos (descricao, fabricante, quantidade, preco_custo, preco_venda, imagem) VALUES (:descricao, :fabricante, :qtd_inteiro, :preco_custo, :preco_venda, :imagem)");
+    $stmt = $pdo->prepare("INSERT INTO produtos (descricao, fabricante, qtd_inteiro, preco_custo, preco_venda, imagem) VALUES (:descricao, :fabricante, :qtd_inteiro, :preco_custo, :preco_venda, :imagem)");
     $stmt->bindParam(':descricao', $descricao);
     $stmt->bindParam(':fabricante', $fabricante);
     $stmt->bindParam(':qtd_inteiro', $qtd_inteiro);
@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         echo "Produto adicionado com sucesso!";
+        header("location: index.php");
+
     } else {
         echo "Erro ao adicionar produto.";
     }
